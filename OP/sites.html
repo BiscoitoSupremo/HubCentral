@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>R_Studio Sites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sites.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">R_<b>Studios</b></div>
+        <nav class="nav-links">
+            <a href="/index.html">Central</a>
+            <a href="/album/album.html">Album</a>
+            <a href="https://github.com/BiscoitoSupremo?page=2&tab=repositories">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-copy">
+            <p class="eyebrow">Essentia Rpg</p>
+            <h1>Organização do RPG em um só lugar.</h1>
+            <p class="subtitle">
+                Vou deixar aqui uns atalhos para melhor acesso durante a partida.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://miro.com/app/board/uXjVJFbNEKg=/" class="primary-btn large">Board Principal</a>
+                <!-- <button class="ghost-btn large">dar uma olhada</button> -->
+            </div>
+        </section>
+
+        <section class="hero-carousel">
+            <div class="carousel-shell">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Anterior">&#10094;</button>
+
+                <div class="carousel-track">
+                    <!-- CARD 1 -->
+                    <article class="profile-card active"
+                             data-title="Notas do RPG"
+                             data-desc="Aqui ficam algumas anotações do RPG, desde anotações do DM, até acontecimentos."
+                             data-link="/OP/diario.html">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/EssentiaNotas.png"
+                                 alt="Pessoa 1">
+                        </div>
+                        <h3>Notas Essentia</h3>
+                        <p>Dossiê direto.</p>
+                    </article>
+
+                    <!-- CARD 2 -->
+                    <article class="profile-card right"
+                             data-title="Board completo de Anotações"
+                             data-desc="Aqui fica todo o circulo de raciocínio do RPG em si."
+                             data-link="https://miro.com/app/live-embed/uXjVJFbNEKg=/?embedMode=view_only_without_ui&moveToViewport=-3912%2C-3879%2C65625%2C59806&embedId=887723541617">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/EssentiaBoard.png"
+                                 alt="Pessoa 2">
+                        </div>
+                        <h3>Board Essentia</h3>
+                        <p>Onde habita a criatura.</p>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article class="profile-card far-right"
+                             data-title="Referência de Criaturas"
+                             data-desc="Apenas uma pasta de pins com ajuda para o desenvolvimento visal das criaturas."
+                             data-link="https://br.pinterest.com/perdidonoslapis/criaturas-de-refer%C3%AAncia/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/EssenciaHumanoide.jpeg"
+                                 alt="Pessoa 3">
+                        </div>
+                        <h3>Formas da Essencia?</h3>
+                        <p>Ela é mais de uma.</p>
+                    </article>
+
+                    <!-- CARD 4 -->
+                    <article class="profile-card far-left"
+                             data-title="Estéticas de personagens"
+                             data-desc="Isso pode ajudar no desenvolvimento dos personagens ou coisas do tipo."
+                             data-link="https://br.pinterest.com/perdidonoslapis/ajuda-p-design/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/Pessoa.jpg"
+                                 alt="Pessoa 4">
+                        </div>
+                        <h3>Personagens Desing</h3>
+                        <p>Meus filhotes vão nascer.</p>
+                    </article>
+
+                    <!-- CARD 5 -->
+                    <article class="profile-card left"
+                             data-title="Livro de Regras"
+                             data-desc="Aqui onde está registrado todo o sistema de Ordem Paranormal e seus mistérios."
+                             data-link="https://anyflip.com/citqy/ktbo/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/livroderegras.jpg"
+                                 alt="Pessoa 5">
+                        </div>
+                        <h3>Manual do jogador</h3>
+                        <p>Veríssimo ficaria orgulhoso.</p>
+                    </article>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Próximo">&#10095;</button>
+            </div>
+
+            <!-- Descrição dinâmica do card central -->
+            <div class="feature-description">
+                <h2 id="featureTitle">Nem sei donde tirei isso</h2>
+                <p id="featureText">
+                    blaublau.
+                </p>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- MODAL DE PRÉ-VISUALIZAÇÃO -->
+    <div class="preview-backdrop" id="previewBackdrop">
+        <div class="preview-modal">
+            <header class="preview-header">
+                <h3 id="previewTitle">Título</h3>
+                <div class="preview-actions">
+                    <button id="previewOpen" class="mini-btn">Abrir página</button>
+                    <button id="previewClose" class="icon-btn" aria-label="Fechar">✕</button>
+                </div>
+            </header>
+            <div class="preview-body">
+                <div class="preview-image-wrapper">
+                    <img id="previewImage" src="" alt="Pré-visualização">
+                </div>
+                <p id="previewText">Descrição aqui...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Sites.js"></script>
+</body>
+</html>

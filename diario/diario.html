@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Diário — Lab.Z</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="diario.css">
+</head>
+<body>
+  <div class="frame">
+    <header class="topbar">
+      <div class="logo">Lab.Z <span class="muted">/ diário</span></div>
+
+      <div class="controls">
+        <button id="prevPage" class="icon">◀</button>
+        <button id="nextPage" class="icon">▶</button>
+        <button id="newNote" class="cta">+ nova nota</button>
+      </div>
+    </header>
+
+    <main class="book-area">
+      <!-- Left (verso) -->
+      <aside class="page page-left" id="pageLeft">
+        <!-- fixed content or dynamic note will be injected -->
+      </aside>
+
+      <!-- Spine (decor) -->
+      <div class="spine"></div>
+
+      <!-- Right (recto) -->
+      <section class="page page-right" id="pageRight">
+        <!-- fixed content or dynamic note will be injected -->
+      </section>
+    </main>
+
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-head">Índice</div>
+      <ul id="fixedList">
+        <!-- fixed pages -->
+      </ul>
+
+      <div class="sidebar-head">Notas</div>
+      <ul id="notesList">
+        <!-- generated notes -->
+      </ul>
+
+      <div class="sidebar-foot">
+        <button id="exportAll" class="small">exportar .json</button>
+        <button id="importJson" class="small">importar</button>
+        <input id="fileInput" type="file" accept=".json" style="display:none">
+      </div>
+    </nav>
+  </div>
+
+  <!-- MODAL EDITOR (reutilizável para criar/editar nota) -->
+  <div class="modal" id="editorModal" aria-hidden="true">
+    <div class="modal-inner">
+      <header>
+        <span id="modalTitle">Nova nota</span>
+        <button id="closeModal" class="close">esc</button>
+      </header>
+
+      <input id="noteTitle" placeholder="Título da nota" />
+      <input id="noteSubtitle" placeholder="Subtítulo (opcional)" />
+      <textarea id="noteContent" placeholder="Escreve o que quiser..."></textarea>
+
+      <div class="modal-actions">
+        <button id="deleteNote" class="danger" style="display:none">deletar</button>
+        <button id="saveNote" class="cta">salvar</button>
+      </div>
+    </div>
+  </div>
+
+<script src="diario.js"></script>
+</body>
+</html>

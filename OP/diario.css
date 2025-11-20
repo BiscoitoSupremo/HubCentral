@@ -1,0 +1,183 @@
+:root{
+  --bg:#050509;      /* 60% preto vibe */
+  --paper:#0c0c0f;   /* páginas slightly lighter */
+  --muted:#cfcfcf;   /* branco 30% */
+  --accent:#903bff;  /* vermelho 10% */
+  --border:#17171a;
+  --radius:14px;
+}
+
+/* reset básico */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg,var(--bg),#000);color:var(--muted);-webkit-font-smoothing:antialiased}
+.frame{max-width:1200px;margin:28px auto;padding:18px;position:relative;}
+
+/* TOPBAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:12px;background:transparent;z-index:8}
+.logo{font-weight:700;letter-spacing:0.08em}
+.logo .muted{font-weight:400;color:#bcbcbc;margin-left:8px;font-size:0.9rem}
+
+/* controls */
+.controls{display:flex;gap:8px;align-items:center}
+.icon{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;color:var(--muted);cursor:pointer;transition:all .18s}
+.icon:hover{transform:translateY(-3px);border-color:rgba(255,59,63,0.22);box-shadow:0 8px 24px rgba(179,0,0,0.06)}
+.cta{background:var(--accent);color:#000;padding:10px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:600;transition:transform .18s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(179,0,0,0.22)}
+
+/* BOOK AREA (two-page spread) */
+.book-area{display:flex;align-items:stretch;gap:18px;margin-top:24px;position:relative;z-index:2}
+.page{
+  width:calc(50% - 24px);
+  min-height:520px;
+  border-radius:10px;
+  padding:28px;
+  background:linear-gradient(180deg,var(--paper),#07070a);
+  border:1px solid var(--border);
+  box-shadow:0 30px 80px rgba(0,0,0,0.7);
+  position:relative;
+  overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+/* We create a slim "cut" between pages with a subtle bevel + inner red glow */
+.spine{
+  width:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  margin:0 6px;
+  z-index:3;
+}
+
+/* outer thin bar to separate pages, dark glossy */
+.spine::before{
+  content:"";
+  width:8px;
+  height:100%;
+  background:linear-gradient(180deg,#050507,#0b0b0e);
+  border-radius:999px;
+  box-shadow: inset 0 1px 8px rgba(255,255,255,0.02), 0 18px 40px rgba(0,0,0,0.7);
+  position:absolute;
+}
+
+/* the inner glowing slit */
+.spine::after{
+  content:"";
+  width:4px;
+  height:80%;
+  border-radius:999px;
+  background:linear-gradient(180deg, rgba(167, 59, 255, 0.95), rgba(255,59,63,0.55));
+  box-shadow:0 0 28px rgba(255,59,63,0.22), 0 0 80px rgba(255,59,63,0.08);
+  transform:rotate(-2deg);
+  position:absolute;
+  left:50%;
+  margin-left:-2px;
+  mix-blend-mode:screen;
+}
+
+/* add thin animated scanline inside the slit for life */
+@keyframes scanline {
+  0%{ transform:translateY(-120%) scaleY(.35); opacity:0 }
+  10%{ opacity:1 }
+  50%{ transform:translateY(0%) scaleY(1.1); opacity:0.65 }
+  100%{ transform:translateY(120%) scaleY(.35); opacity:0 }
+}
+.spine .scan{
+  position:absolute;
+  width:2px;
+  height:60%;
+  left:50%;
+  margin-left:-1px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.05));
+  filter:blur(0.6px);
+  opacity:0.0;
+  animation:scanline 3.6s infinite;
+  animation-delay:0.4s;
+}
+
+/* decorative soft red smear overlay on pages near spine */
+.page::before{
+  content:"";
+  position:absolute;
+  width:260px;height:260px;border-radius:18px;
+  top:-40px;
+  pointer-events:none;
+  mix-blend-mode:screen;
+  opacity:0.22;
+  transition:opacity .25s;
+}
+.page-left::before{
+  right:-36px;
+  background:radial-gradient(circle at 30% 30%, rgba(255,59,63,0.14), transparent 45%);
+}
+.page-right::before{
+  left:-36px;
+  background:radial-gradient(circle at 70% 70%, rgba(255,59,63,0.08), transparent 45%);
+}
+
+/* subtle notch shape (like sticker) bottom corner to add editorial feel */
+.page-right::after{
+  content:"";
+  position:absolute;
+  right:22px;
+  bottom:22px;
+  width:68px;height:60px;border-radius:10px;background:linear-gradient(180deg, rgba(179,0,0,0.08), rgba(0,0,0,0));
+  transform:skewX(-8deg);
+  pointer-events:none;
+}
+
+/* HOVER micro reaction: pages lift, glow intensifies */
+.book-area:hover .page{ transform:translateY(0); }
+.page:hover{ transform:translateY(-6px); box-shadow:0 50px 120px rgba(0,0,0,0.8) }
+
+/* media box style */
+.media{ width:100%;height:220px;background:#0b0b0d;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;color:#aaa;font-weight:600;margin:8px 0 18px;overflow:hidden }
+.media img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(30%)}
+
+/* typography */
+.h-title{font-size:2rem;letter-spacing:0.01em;margin:0 0 10px;color:#fff}
+.h-sub{color:#cfcfcf;margin:0 0 18px;font-size:0.95rem}
+.block{background:transparent;padding:8px 0;border-left:3px solid rgba(255,255,255,0.03);margin-bottom:10px}
+
+/* specific styles for fixed pages */
+.meta{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+.tag{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);font-size:0.8rem;color:#ddd}
+.chapter{font-weight:700;color:var(--accent);font-size:1.35rem}
+
+/* sidebar (index) */
+.sidebar{position:absolute;right:-360px;top:48px;width:320px;padding:18px;background:linear-gradient(180deg,#070709,#060606);border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 50px 110px rgba(0,0,0,0.7)}
+.sidebar-head{font-size:0.9rem;color:#cfcfcf;margin:6px 0 8px}
+.sidebar ul{list-style:none;padding:0;margin:0;max-height:48vh;overflow:auto}
+.sidebar li{padding:10px;border-radius:8px;margin-bottom:8px;border:1px solid transparent;cursor:pointer;transition:all .18s;background:transparent}
+.sidebar li:hover{transform:translateX(6px);border-color:rgba(255,59,63,0.12);background:rgba(255,59,63,0.03);color:var(--accent)}
+.sidebar-foot{display:flex;gap:8px;margin-top:12px}
+
+/* modal editor */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);opacity:0;pointer-events:none;transition:opacity .18s;z-index:40}
+.modal[aria-hidden="false"]{opacity:1;pointer-events:auto}
+.modal-inner{width:min(880px,94%);background:linear-gradient(180deg,#070708,#0b0b0e);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 30px 90px rgba(0,0,0,0.8)}
+.modal header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.modal input, .modal textarea{width:100%;padding:12px;border-radius:8px;background:#0c0c0e;border:1px solid rgba(255,255,255,0.03);color:var(--muted);margin-bottom:8px;outline:none}
+.modal textarea{min-height:240px;resize:vertical}
+.close{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px;border-radius:8px;cursor:pointer}
+.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+.small{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);cursor:pointer}
+.danger{background:transparent;border:1px solid rgba(255,59,63,0.18);color:var(--accent);padding:10px;border-radius:8px;cursor:pointer}
+
+/* NOTES LIST item highlight */
+.notes-meta{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.note-title{font-weight:600;color:#fff}
+.note-sub{font-size:0.85rem;color:#c9c9c9}
+
+/* responsive */
+@media (max-width:1000px){
+  .frame{padding:12px}
+  .book-area{flex-direction:column;gap:18px}
+  .page{width:100%;clip-path:none}
+  .spine{display:flex;justify-content:center}
+  .spine::before{display:none} /* hide inner bar on small */
+  .spine::after{width:36px;height:6px;left:50%;margin-left:-18px;transform:none;opacity:0.65;border-radius:6px}
+  .spine .scan{display:none}
+  .sidebar{position:static;right:auto;width:100%;margin-top:18px}
+}

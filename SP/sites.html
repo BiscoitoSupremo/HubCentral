@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>R_Studio Sites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sites.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">R_<b>Studios</b></div>
+        <nav class="nav-links">
+            <a href="/index.html">Central</a>
+            <a href="/album/album.html">Album</a>
+            <a href="https://github.com/BiscoitoSupremo?page=2&tab=repositories">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-copy">
+            <p class="eyebrow">Projetos e ideias futuras</p>
+            <h1>Bater aquele dejavu de ideias né.</h1>
+            <p class="subtitle">
+                Aqui estão as bases para novas ideias minhas.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://biscoitosupremo.github.io/Dustin/" class="primary-btn large">Shiuu</a>
+                <!-- <button class="ghost-btn large">dar uma olhada</button> -->
+            </div>
+        </section>
+
+        <section class="hero-carousel">
+            <div class="carousel-shell">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Anterior">&#10094;</button>
+
+                <div class="carousel-track">
+                    <!-- CARD 1 -->
+                    <article class="profile-card active"
+                             data-title="Board do projeto RPG Sangue e poeira"
+                             data-desc="Projeto orquestrado com Eric mas sem sucesso pelo visto."
+                             data-link="https://miro.com/app/board/uXjVI7UDp1k=/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/MERINDA.png"
+                                 alt="Pessoa 1">
+                        </div>
+                        <h3>Sangue e Poeria RPG</h3>
+                        <p>Um novo mundo.</p>
+                    </article>
+
+                    <!-- CARD 2 -->
+                    <article class="profile-card right"
+                             data-title="Esboço da lore do RPG"
+                             data-desc="Aqui fica guardado o esboço da trama."
+                             data-link="https://1drv.ms/w/c/aec319c99db3c00d/ES7pkw8efL9Ar88CuWIC1Y8B53XwHk3fD2zNRmlrTQD7-g?e=Dz9VxA">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/detetive lupo.png"
+                                 alt="Pessoa 2">
+                        </div>
+                        <h3>Trama Sangue e Poeira</h3>
+                        <p>Cristais são pontudos.</p>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article class="profile-card far-right"
+                             data-title="Diário de Timmy"
+                             data-desc="Meu mano! Meu queridão! Aqui fica o diário do meu meninão."
+                             data-link="https://1drv.ms/w/c/aec319c99db3c00d/EZd8p_1EyfpFnGfcxSElmg8BmvRgCK45u2g0ZRQ_RuV9MA?e=gDhgus">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/Crônicas da lua.png"
+                                 alt="Pessoa 3">
+                        </div>
+                        <h3>Crônicas Da Lua</h3>
+                        <p>Um corpo frio.</p>
+                    </article>
+
+                    <!-- CARD 4 -->
+                    <article class="profile-card far-left"
+                             data-title="Meu Bebêeeeee"
+                             data-desc="MEU FILHÃOOOOOO! MEU TOP 1!!!! Aqui fica localizado o cap 1 de Oblivion."
+                             data-link="https://1drv.ms/w/c/aec319c99db3c00d/EYSVYbiT9FBGho9FlMUfYBEBua2nJ31G9BbQHEF_e4S2Tw?e=3KTfUw">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/Logo Branca.png"
+                                 alt="Pessoa 4">
+                        </div>
+                        <h3>Oblivion</h3>
+                        <p>"Esse é meu Destino".</p>
+                    </article>
+
+                    <!-- CARD 5 -->
+                    <article class="profile-card left"
+                             data-title="Ideia Futura"
+                             data-desc="O melhor dos desenhos, base ideal para novas ideias futuras."
+                             data-link="https://gravityfallsbr.fandom.com/pt-br/wiki/Wikia_Gravity_Falls">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/gravityfallswiki.png"
+                                 alt="Pessoa 5">
+                        </div>
+                        <h3>Gravity Wiki</h3>
+                        <p>base para novas ideias.</p>
+                    </article>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Próximo">&#10095;</button>
+            </div>
+
+            <!-- Descrição dinâmica do card central -->
+            <div class="feature-description">
+                <h2 id="featureTitle">Nem sei donde tirei isso</h2>
+                <p id="featureText">
+                    blaublau.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE PRÉ-VISUALIZAÇÃO -->
+    <div class="preview-backdrop" id="previewBackdrop">
+        <div class="preview-modal">
+            <header class="preview-header">
+                <h3 id="previewTitle">Título</h3>
+                <div class="preview-actions">
+                    <button id="previewOpen" class="mini-btn">Abrir página</button>
+                    <button id="previewClose" class="icon-btn" aria-label="Fechar">✕</button>
+                </div>
+            </header>
+            <div class="preview-body">
+                <div class="preview-image-wrapper">
+                    <img id="previewImage" src="" alt="Pré-visualização">
+                </div>
+                <p id="previewText">Descrição aqui...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Sites.js"></script>
+</body>
+</html>

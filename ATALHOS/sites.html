@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>R_Studio Sites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sites.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">R_<b>Studios</b></div>
+        <nav class="nav-links">
+            <a href="/index.html">Central</a>
+            <a href="/album/album.html">Album</a>
+            <a href="https://github.com/BiscoitoSupremo?page=2&tab=repositories">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-copy">
+            <p class="eyebrow">Atalhos práticos</p>
+            <h1>Vai que eu precise né?.</h1>
+            <p class="subtitle">
+                provável que eu use bastante então achei legal colocá-los aqui.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://www.myinstants.com/en/index/us/" class="primary-btn large">Sons para descontrair</a>
+                <!-- <button class="ghost-btn large">dar uma olhada</button> -->
+            </div>
+        </section>
+
+        <section class="hero-carousel">
+            <div class="carousel-shell">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Anterior">&#10094;</button>
+
+                <div class="carousel-track">
+                    <!-- CARD 1 -->
+                    <article class="profile-card active"
+                             data-title="Pinterest"
+                             data-desc="Uso bastante independentemente da questão então mantive como um dos principais."
+                             data-link="https://br.pinterest.com/perdidonoslapis/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/iconpinterest.jpg"
+                                 alt="Pessoa 1">
+                        </div>
+                        <h3>✓®Artist</h3>
+                        <p>Meu Pinterest.</p>
+                    </article>
+
+                    <!-- CARD 2 -->
+                    <article class="profile-card right"
+                             data-title="Spotify"
+                             data-desc="Uma músiquinha nunca é demais né? Sempre ir acompanhado de umas bangers insanas."
+                             data-link="https://open.spotify.com/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/iconspotify.jpg"
+                                 alt="Pessoa 2">
+                        </div>
+                        <h3>AN0N1M0S1350</h3>
+                        <p>Meu Spotify.</p>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article class="profile-card far-right"
+                             data-title="ChatGPT"
+                             data-desc="Meu companheiro de ajudas e conselhos gerais. O renomado NOX."
+                             data-link="https://chatgpt.com/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/chatgpt.png"
+                                 alt="Pessoa 3">
+                        </div>
+                        <h3>NOX o bobão</h3>
+                        <p>Meu ChatGPT.</p>
+                    </article>
+
+                    <!-- CARD 4 -->
+                    <article class="profile-card far-left"
+                             data-title="SoundPad"
+                             data-desc="Aqui que vou usar uns sons mais complexos durante algumas coisas como por exemplo as sessões de RPG."
+                             data-link="https://tabletopaudio.com/soundpad.html">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/EssentiaNotas.png"
+                                 alt="Pessoa 4">
+                        </div>
+                        <h3>Uns sonzinhos</h3>
+                        <p>Meu SoundPad.</p>
+                    </article>
+
+                    <!-- CARD 5 -->
+                    <article class="profile-card left"
+                             data-title="Miro Boards"
+                             data-desc="Em resumo são apenas meus boards, deixei aqui porque sempre tô indo dar uma olhada."
+                             data-link="https://miro.com/app/dashboard/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/EssentiaBoard.png"
+                                 alt="Pessoa 5">
+                        </div>
+                        <h3>Umas anotações?</h3>
+                        <p>Meu Miro.</p>
+                    </article>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Próximo">&#10095;</button>
+            </div>
+
+            <!-- Descrição dinâmica do card central -->
+            <div class="feature-description">
+                <h2 id="featureTitle">Nem sei donde tirei isso</h2>
+                <p id="featureText">
+                    blaublau.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE PRÉ-VISUALIZAÇÃO -->
+    <div class="preview-backdrop" id="previewBackdrop">
+        <div class="preview-modal">
+            <header class="preview-header">
+                <h3 id="previewTitle">Título</h3>
+                <div class="preview-actions">
+                    <button id="previewOpen" class="mini-btn">Abrir página</button>
+                    <button id="previewClose" class="icon-btn" aria-label="Fechar">✕</button>
+                </div>
+            </header>
+            <div class="preview-body">
+                <div class="preview-image-wrapper">
+                    <img id="previewImage" src="" alt="Pré-visualização">
+                </div>
+                <p id="previewText">Descrição aqui...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Sites.js"></script>
+</body>
+</html>

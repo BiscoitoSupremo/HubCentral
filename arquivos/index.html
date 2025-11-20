@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Arquivos</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="Arquivos.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="brand">
+      <div class="brand-mark">CA</div>
+      <div class="brand-text">
+        <span class="brand-label">Built by</span>
+        <span class="brand-name">Centro de Arquivos</span>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/index.html" class="nav-link active">Central</a>
+      <a href="/album/album.html" class="nav-link">Album</a>
+      <a href="/ATALHOS/sites.html" class="nav-link">Atalhos</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Uma colmeia mais inteligente</h1>
+      <p>Guarde, visualize e filtre seus arquivos em um painel hexagonal elegante.</p>
+      <p id="file-count" class="file-count">0 arquivos armazenados</p>
+    </section>
+
+    <section class="controls">
+      <div class="controls-left">
+        <label class="upload-btn">
+          Carregar arquivo
+          <input type="file" id="upload" hidden />
+        </label>
+      </div>
+
+      <div class="controls-right">
+        <div class="type-filters">
+          <button class="chip chip-active" data-type="all">Todos</button>
+          <button class="chip" data-type="image">Imagens</button>
+          <button class="chip" data-type="document">Documentos</button>
+          <button class="chip" data-type="code">Código</button>
+          <button class="chip" data-type="other">Outros</button>
+        </div>
+
+        <input
+          type="text"
+          id="search"
+          class="search-input"
+          placeholder="Filtrar por nome do arquivo..."
+        />
+      </div>
+    </section>
+
+    <section id="file-grid" class="file-grid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="preview-modal" class="hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-info">
+          <h2 id="modal-filename">Arquivo</h2>
+          <p id="modal-meta"></p>
+        </div>
+        <div class="modal-actions">
+          <button id="download-file" class="btn-secondary">Baixar</button>
+          <button id="delete-file" class="btn-danger">Excluir</button>
+          <button id="close-modal" class="btn-icon">×</button>
+        </div>
+      </div>
+
+      <div id="preview-area" class="preview-area"></div>
+    </div>
+  </div>
+
+  <script src="Arquivos.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R_Studios Base Central</title>
+
+  <!-- Fonte (opcional, pode trocar depois) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-frame">
+
+    <!-- NAVBAR -->
+    <header class="top-nav">
+      <div class="logo">
+        <span class="logo-mark">+</span>
+        <span class="logo-text">R_Studios</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#overview">overview</a>
+        <a href="#projects">projetos</a>
+        <a href="#archive">arquivos</a>
+        <a href="#lab">lab</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section id="overview" class="hero reveal">
+        <div class="hero-text">
+          <p class="eyebrow">Minha BatCaverna</p>
+          <h1>Meu laboratório pessoal<br>Tudo que toco em um só lugar.</h1>
+          <p class="hero-sub">
+            Central privada para guardar ideias, arquivos, rascunhos e o que mais
+            eu inventar. Tudo em um só lugar, aquele toque clássico de genialidade.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">ver projetos</a>
+            <a href="#archive" class="btn ghost">ir para arquivos</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>CTRL + K — abrir comando rápido</span>
+            <span>v0.1 · modo laboratório</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card main-card">
+            <div class="card-tag">AGORA</div>
+            <h2>Dashboard pessoal</h2>
+            <p>hub de ponto de partida.</p>
+            <button class="chip">configurar atalhos</button>
+          </div>
+
+          <div class="hero-card side-card">
+            <span class="side-label">status</span>
+            <span class="side-value">online</span>
+          </div>
+
+          <div class="accent-block"></div>
+        </div>
+      </section>
+
+      <!-- GRID DE BLOCOS / LINKS PRINCIPAIS -->
+       
+      <!-- ARQUIVOS / ARQUIVO MORTO -->
+      <section id="archive" class="section reveal">
+        <header class="section-head">
+          <h2>Arquivos e documentos</h2>
+          <p>
+            Maneira mais fluida e flexível de encontrar meus dados que desejo utilizar, um clique e tchã-rã.
+          </p>
+        </header>
+
+        <div class="grid archive-grid">
+          <a href="album/album.html" target="_blank" class="block-card">
+            <div class="block-content">
+              <h3>Catálogo</h3>
+              <p>Coleção de informações importantes junto de imagens.</p>
+              <span class="block-cta">Ir para o algum →</span>
+            </div>
+          </a>
+
+          <a href="diario/diario.html" target="_blank" class="block-card">
+            <div class="block-content">
+              <h3>Anotações</h3>
+              <p>Informações e escritas são logo aqui.</p>
+              <span class="block-cta">Pegar o lápis →</span>
+            </div>
+          </a>
+
+          <a href="arquivos/index.html" target="_blank" class="block-card">
+            <div class="block-content">
+              <h3>Colmeia de arquivos</h3>
+              <p>Guardar documentos é comigo mesmo, pode deixar e depois voltar.</p>
+              <span class="block-cta">Abrir cofre →</span>
+            </div>
+          </a>
+        </div>
+      </section> 
+
+      <!-- PROJETOS -->
+      <section id="projects" class="section reveal">
+        <header class="section-head">
+          <h2>Projetos</h2>
+          <p>Mundos paralelos com meus filhotes lindos e cheirosos.</p>
+        </header>
+
+        <div class="grid">
+          <!-- CARD 1 -->
+          <a href="Sites/sites.html" target="_blank" class="block-card large">
+            <div class="block-media">
+              <span class="block-label">Carrossel de sites</span>
+            </div>
+            <div class="block-content">
+              <h3>Meus filhotes</h3>
+              <p>
+                Aqui eu deixo eles descansando, mas se quiser dar uma olhada basta clicar.
+              </p>
+              <span class="block-cta">abrir espaço principal →</span>
+            </div>
+          </a>
+
+          <!-- CARD 2 -->
+          <a href="https://miro.com/app/dashboard/" target="_blank" class="block-card tall">
+            <div class="block-media alt">
+              <span class="block-label">ANOTAÇÔES MAIORES</span>
+            </div>
+            <div class="block-content">
+              <h3>Boards para os RPGS e taus</h3>
+              <p>
+                Canto onde deixo os estudos de boards e taus dos meus RPGS.
+              </p>
+              <span class="block-cta">abrir caderno digital →</span>
+            </div>
+          </a>
+
+          <!-- CARD 3 -->
+          <a href="https://github.com/BiscoitoSupremo?tab=repositories" target="_blank" class="block-card wide">
+            <div class="block-media">
+              <span class="block-label">GITHUB</span>
+            </div>
+            <div class="block-content">
+              <h3>Repositórios / Vitrine</h3>
+              <p>
+                Caminho mais rápido para ver minha base de dados insana e local de up nos sites.
+              </p>
+              <span class="block-cta">Ver lojinha do seu Zé →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+      <!-- LAB / EXPERIMENTOS -->
+      <section id="lab" class="section section-lab reveal">
+        <header class="section-head">
+          <h2>Essentia RPG</h2>
+          <p>
+            Atalho para busca de informações ou arquivos de Essentia - OP.
+          </p>
+        </header>
+
+        <div class="lab-layout">
+          <div class="lab-visual">
+            <div class="lab-hand"></div>
+            <div class="lab-tag">Ordem Paranormal</div>
+          </div>
+
+          <div class="lab-info">
+            <h3>Dossiê de informações</h3>
+            <p>
+              Acesso restrito para não colaboradores - confidencial.
+            </p>
+
+            <div class="lab-actions">
+              <a href="OP/sites.html" target="_blank" class="btn primary">
+                Ver Outro Lado
+              </a>
+              <button class="btn ghost" id="toggle-density">
+                alternar densidade da interface
+              </button>
+            </div>
+
+            <ul class="lab-list">
+              <li>Combatente?</li>
+              <li>Especialista?</li>
+              <li>Oculstista?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- segundo -->
+        <section id="lab" class="section section-lab reveal">
+        <header class="section-head">
+          <h2>Empire Of Kings</h2>
+          <p>
+            Atalho para os arquivos e documentos.
+          </p>
+        </header>
+
+        <div class="lab-layout">
+          <div class="lab-visual">
+            <div class="lab-hand"></div>
+            <div class="lab-tag">Eok - database</div>
+          </div>
+
+          <div class="lab-info">
+            <h3>Susurros distantes</h3>
+            <p>
+              Aqui ficam os acessos ao mundo de EOK, entra e se divirta.
+            </p>
+
+            <div class="lab-actions">
+              <a href="EOK/sites.html" target="_blank" class="btn primary">
+                o que deixa para o vento?
+              </a>
+              <button class="btn ghost" id="toggle-density">
+                alternar densidade da interface
+              </button>
+            </div>
+
+            <ul class="lab-list">
+              <li>Ajuda para sessões</li>
+              <li>Sites da franquia</li>
+              <li>Outros</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+<!-- terceiro -->
+         <section id="lab" class="section section-lab reveal">
+        <header class="section-head">
+          <h2>Futuros</h2>
+          <p>
+            Projetos ainda em contrução.
+          </p>
+        </header>
+
+        <div class="lab-layout">
+          <div class="lab-visual">
+            <div class="lab-hand"></div>
+            <div class="lab-tag">Vaza curioso</div>
+          </div>
+
+          <div class="lab-info">
+            <h3>ideias na cachola</h3>
+            <p>
+              Aqui estão alguns projetos que ainda irei colocar em prática mas vamos ver no que dá.
+            </p>
+
+            <div class="lab-actions">
+              <a href="SP/sites.html" target="_blank" class="btn primary">
+                Que tal um spoiler ein?
+              </a>
+              <button class="btn ghost" id="toggle-density">
+                alternar densidade da interface
+              </button>
+            </div>
+
+            <ul class="lab-list">
+              <li>Spoiler</li>
+              <li>Inspiração</li>
+              <li>Outros</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- quarto -->
+        <section id="lab" class="section section-lab reveal">
+        <header class="section-head">
+          <h2>Atalhos</h2>
+          <p>
+            Simplesmente atalhos para coisas que mexo no dia a dia.
+          </p>
+        </header>
+
+        <div class="lab-layout">
+          <div class="lab-visual">
+            <div class="lab-hand"></div>
+            <div class="lab-tag">Flexibilidade</div>
+          </div>
+
+          <div class="lab-info">
+            <h3>Preguiça né?</h3>
+            <p>
+              Apenas uns atalhozinhos para que eu possa clicar mais rápido.
+            </p>
+
+            <div class="lab-actions">
+              <a href="ATALHOS/sites.html" target="_blank" class="btn primary">
+                Dar uma olhada.
+              </a>
+              <button class="btn ghost" id="toggle-density">
+                alternar densidade da interface
+              </button>
+            </div>
+
+            <ul class="lab-list">
+              <li>Preguiça</li>
+              <li>Atalhos</li>
+              <li>Outros</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- chega -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© <span id="year"></span> · R_Studios - Direitos Reservados.</span>
+      <span>Centralizando toda minha janela de experiências em um só local.</span>
+    </footer>
+
+  </div>
+
+  <!-- OVERLAY DE COMANDO RÁPIDO (CTRL+K) -->
+  <div class="command-palette" id="commandPalette" aria-hidden="true">
+    <div class="command-inner">
+      <div class="command-header">
+        <span>Comando rápido</span>
+        <button id="closePalette" class="close-btn">esc</button>
+      </div>
+      <input
+        type="text"
+        id="commandInput"
+        placeholder="Digite: projetos, arquivos, lab..."
+        autocomplete="off"
+      />
+      <ul class="command-results" id="commandResults">
+        <li data-target="#projects">Ir para Projetos</li>
+        <li data-target="#archive">Ir para Arquivos</li>
+        <li data-target="#lab">Ir para Laboratório</li>
+      </ul>
+      <p class="command-hint">Use ↑ ↓ para navegar · Enter para abrir</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

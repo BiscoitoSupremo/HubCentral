@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>R_Studio Sites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sites.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">R_<b>Studios</b></div>
+        <nav class="nav-links">
+            <a href="/index.html">Central</a>
+            <a href="/album/album.html">Album</a>
+            <a href="https://github.com/BiscoitoSupremo?page=2&tab=repositories">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-copy">
+            <p class="eyebrow">Empire Of Kings</p>
+            <h1>Aqui  ficam guardados os dados deste lindo mundo.</h1>
+            <p class="subtitle">
+                Uma jornada incrível, digamos que o mundo mais bem recheado de minhas histórias.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://biscoitosupremo.github.io/Imperadores/" class="primary-btn large">O fim</a>
+                <!-- <button class="ghost-btn large">dar uma olhada</button> -->
+            </div>
+        </section>
+
+        <section class="hero-carousel">
+            <div class="carousel-shell">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Anterior">&#10094;</button>
+
+                <div class="carousel-track">
+                    <!-- CARD 1 -->
+                    <article class="profile-card active"
+                             data-title="Grimório Empire Of Kings"
+                             data-desc="Aqui está a obra escrita por Merlin a Elfa, onde guarda suas reliquias e saberes."
+                             data-link="https://biscoitosupremo.github.io/de-novo/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/temer.png"
+                                 alt="Pessoa 1">
+                        </div>
+                        <h3>Grimório EOK</h3>
+                        <p>Orgulho da Merlin.</p>
+                    </article>
+
+                    <!-- CARD 2 -->
+                    <article class="profile-card right"
+                             data-title="Dossiês de Eryndor"
+                             data-desc="Aqui é guardado o aprofundado dossiê de Eryndor, um homem simples vivendo em uma ambiente rodeado de fantasia."
+                             data-link="https://biscoitosupremo.github.io/eryndor/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/detetive lupo.png"
+                                 alt="Pessoa 2">
+                        </div>
+                        <h3>Detetive Eryndor</h3>
+                        <p>Ele não é mais o mesmo.</p>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article class="profile-card far-right"
+                             data-title="Diário de Merlin"
+                             data-desc="O passado de Merlin descrito com seus próprios dedos."
+                             data-link="https://biscoitosupremo.github.io/15-49/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/MERLIN.png"
+                                 alt="Pessoa 3">
+                        </div>
+                        <h3>Escolhas de Merlin</h3>
+                        <p>Eles não param de gritar.</p>
+                    </article>
+
+                    <!-- CARD 4 -->
+                    <article class="profile-card far-left"
+                             data-title="Página perdida de EOk"
+                             data-desc="Um dos fundamentos mais importantes do RPG, descrevendo como é formado o sistema socio-econômico da região."
+                             data-link="https://biscoitosupremo.github.io/349/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/Oliver.png"
+                                 alt="Pessoa 4">
+                        </div>
+                        <h3>Documentos Raros</h3>
+                        <p>Página de Oliver.</p>
+                    </article>
+
+                    <!-- CARD 5 -->
+                    <article class="profile-card left"
+                             data-title="Ficha EOK"
+                             data-desc="Ficha personalizada do sistema, aqui eu diria ser minha maior mecânica."
+                             data-link="https://biscoitosupremo.github.io/FICHA-EOK/">
+                        <div class="avatar-wrapper">
+                            <img src="/assets/Possuido marca EOK.png"
+                                 alt="Pessoa 5">
+                        </div>
+                        <h3>Ficha do sistema</h3>
+                        <p>Ascenda para o novo plano.</p>
+                    </article>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Próximo">&#10095;</button>
+            </div>
+
+            <!-- Descrição dinâmica do card central -->
+            <div class="feature-description">
+                <h2 id="featureTitle">Nem sei donde tirei isso</h2>
+                <p id="featureText">
+                    blaublau.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE PRÉ-VISUALIZAÇÃO -->
+    <div class="preview-backdrop" id="previewBackdrop">
+        <div class="preview-modal">
+            <header class="preview-header">
+                <h3 id="previewTitle">Título</h3>
+                <div class="preview-actions">
+                    <button id="previewOpen" class="mini-btn">Abrir página</button>
+                    <button id="previewClose" class="icon-btn" aria-label="Fechar">✕</button>
+                </div>
+            </header>
+            <div class="preview-body">
+                <div class="preview-image-wrapper">
+                    <img id="previewImage" src="" alt="Pré-visualização">
+                </div>
+                <p id="previewText">Descrição aqui...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Sites.js"></script>
+</body>
+</html>
