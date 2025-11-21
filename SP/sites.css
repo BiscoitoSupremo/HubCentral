@@ -4,8 +4,8 @@
     --bg-soft: #1b1b1b;
     --text: #f5f5f5;
     --muted: #a0a0a0;
-    --accent: #4409e5; /* vermelho principal */
-    --accent-soft: #4409e556;
+    --accent: #e50914;
+    --accent-soft: rgba(229, 9, 20, 0.25);
     --radius-lg: 24px;
     --radius-md: 16px;
     --radius-sm: 10px;
@@ -87,11 +87,6 @@ body {
     width: 100%;
 }
 
-.nav-actions {
-    display: flex;
-    gap: 10px;
-}
-
 /* Botões */
 
 .primary-btn,
@@ -143,6 +138,7 @@ body {
     gap: 42px;
     align-items: center;
 }
+
 .hero {
     position: relative;
     z-index: 0;
@@ -155,7 +151,7 @@ body {
 
 .hero-carousel {
     position: relative;
-    z-index: 2; /* garante que o carrossel fica acima do bloco de texto */
+    z-index: 2;
 }
 
 .hero-copy .eyebrow {
@@ -185,7 +181,7 @@ body {
     gap: 10px;
 }
 
-/* Carousel + cards */
+/* Carousel */
 
 .hero-carousel {
     display: flex;
@@ -250,8 +246,6 @@ body {
     color: var(--muted);
 }
 
-/* Avatar */
-
 .avatar-wrapper {
     width: 90px;
     height: 90px;
@@ -268,7 +262,7 @@ body {
     object-fit: cover;
 }
 
-/* Estados de profundidade */
+/* Depth classes */
 
 .profile-card.active {
     transform: translateY(-20px) translateZ(160px) scale(1.1);
@@ -312,7 +306,7 @@ body {
     transform: translateZ(-200px) scale(0.7);
 }
 
-/* Setas */
+/* Arrows */
 
 .nav-arrow {
     position: absolute;
@@ -347,12 +341,12 @@ body {
     box-shadow: 0 14px 26px var(--accent-soft);
 }
 
-/* Descrição da feature */
+/* Feature description */
 
 .feature-description {
     padding: 18px 22px 20px;
     border-radius: var(--radius-md);
-    background: linear-gradient(120deg, rgba(57, 9, 229, 0.15), transparent);
+    background: linear-gradient(120deg, rgba(229, 9, 20, 0.15), transparent);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -470,16 +464,36 @@ body {
     color: var(--muted);
 }
 
-/* Responsivo */
+/* ================ */
+/* RESPONSIVO       */
+/* ================ */
 
+/* 860px — inicia versão mobile */
 @media (max-width: 860px) {
+
     .hero {
         grid-template-columns: 1fr;
         margin-top: 26px;
     }
 
+    /* Copy hero em cima */
+    .hero-copy {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-copy .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-ctas {
+        justify-content: center;
+    }
+
+    /* Carrossel embaixo */
     .hero-carousel {
-        order: -1;
+        order: 2;
     }
 
     .carousel-shell {
@@ -496,14 +510,44 @@ body {
     }
 }
 
+/* 600px — 1 card por vez */
 @media (max-width: 600px) {
+
     .carousel-shell {
         padding-inline: 40px;
     }
 
-    .profile-card {
-        width: 170px;
+    .carousel-track {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        min-height: 260px;
+    }
+
+    .hero-carousel .profile-card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 260px;
         border-radius: 22px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hero-carousel .profile-card.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-carousel .profile-card.left,
+    .hero-carousel .profile-card.right,
+    .hero-carousel .profile-card.far-left,
+    .hero-carousel .profile-card.far-right {
+        transform: translate(-50%, -50%);
     }
 
     .preview-body {
@@ -511,12 +555,16 @@ body {
     }
 }
 
+/* 480px — setas continuam visíveis, só menores */
 @media (max-width: 480px) {
+
     .carousel-shell {
         padding-inline: 34px;
     }
 
     .nav-arrow {
-        display: none; /* mobile pode só clicar nos cards */
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
     }
 }
