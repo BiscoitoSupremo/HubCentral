@@ -10,14 +10,16 @@ const fixedPages = [
   {
     id: 'cover',
     title: 'Capa',
-    left: `<div class="h-title">Diário — Lab.Z</div><div class="h-sub">Arquivo pessoal · edição experimental</div><div class="media">[IMAGEM / CAPA]</div><div class="block">v0.1 · modo laboratório</div>`,
+    left: `<div class="h-title">Diário — Essentia</div><div class="h-sub">Arquivo pessoal · edição experimental</div><div class="media">
+      <img src="2.png" alt="Capa do diário">
+    </div><div class="block">v0.1 · modo laboratório</div>`,
     right: `<div class="chapter">Sumário</div><div class="block"><ol><li>Introdução</li><li>Dossiês</li><li>Notas</li></ol></div>`
   },
   {
     id: 'dossie',
     title: 'Dossiê: Projetos',
     left: `<div class="chapter">Dossiê — Projetos</div><div class="h-sub">Compilado de projetos significativos</div>`,
-    right: `<div class="block">Projeto: ENEM HUB — notas e recursos</div><div class="media">[screenshot]</div>`
+    right: `<div class="block">Projeto: Experimentos — notas e recursos</div><div class="media">[screenshot]</div>`
   },
   {
     id: 'guide',
