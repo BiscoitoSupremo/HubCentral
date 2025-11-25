@@ -10,7 +10,9 @@ const fixedPages = [
   {
     id: 'cover',
     title: 'Capa',
-    left: `<div class="h-title">Diário — Lab.Z</div><div class="h-sub">Arquivo pessoal · edição experimental</div><div class="media">[IMAGEM / CAPA]</div><div class="block">v0.1 · modo laboratório</div>`,
+    left: `<div class="h-title">Diário — Lab.Z</div><div class="h-sub">Arquivo pessoal · edição experimental</div><div class="media">
+    <img src="1.png" alt="Capa do diário">
+    </div><div class="block">v0.1 · modo laboratório</div>`,
     right: `<div class="chapter">Sumário</div><div class="block"><ol><li>Introdução</li><li>Dossiês</li><li>Notas</li></ol></div>`
   },
   {
